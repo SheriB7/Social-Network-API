@@ -13,36 +13,27 @@ const thoughtSchema = new Schema(
     },
     createdAt: {
       type: Date,
+      //current time
       default: Date.now,
+      //getter method for timestamp 
+      get: (timestamp) => dateFormat(timestamp),
     },
-    advertiserFriendly: {
-      type: Boolean,
-      default: true,
-    },
-    description: {
+    username: {
       type: String,
-      minLength: 15,
-      maxLength: 500,
+      required: true,
     },
-    responses: [Response],
-  },
-  {
-    toJSON: {
-      virtuals: true,
-    },
-    id: false,
-  }
-);
+    reactions: [ReactionSchema],
+    
+});
 
 // Create a virtual property `responses` that gets the amount of response per thought
-thoughtSchema
-  .virtual('getResponses')
+thoughtSchema.virtual('reactionCount')
   // Getter
   .get(function () {
-    return this.responses.length;
+    return this.reactions.length;
   });
 
 // Initialize our Thought model
-const Thought = model('thought', thoughtSchema);
+const Thought = model('Thought', thoughtSchema);
 
 module.exports = Thought;
