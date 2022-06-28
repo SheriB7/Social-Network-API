@@ -1,5 +1,6 @@
 const { Schema, model } = require('mongoose');
-const Response = require('./Response');
+const reactionSchema = require('./Reaction');
+const moment = require('moment');
 
 // Schema to create Post model
 const thoughtSchema = new Schema(
@@ -16,15 +17,23 @@ const thoughtSchema = new Schema(
       //current time
       default: Date.now,
       //getter method for timestamp 
-      get: (timestamp) => dateFormat(timestamp),
+      // get: (timestamp) => dateFormat(timestamp),
+      get: (createdAtVal) => moment(createdAtVal).format('MMM DD, YYYY [at] hh:mm a')
     },
     username: {
       type: String,
       required: true,
     },
-    reactions: [ReactionSchema],
-    
+    reactions: [reactionSchema]
+  },
+  {
+    toJSON: {
+        virtuals: true,
+        getters: true
+    },
+    id: false
 });
+
 
 // Create a virtual property `responses` that gets the amount of response per thought
 thoughtSchema.virtual('reactionCount')
