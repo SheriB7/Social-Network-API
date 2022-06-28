@@ -28,6 +28,18 @@ router.route('/:id')
 // .put(addFriend)
 // .delete(deleteFriend)
 
+//api/thought
+// router.route()
+// .get(getAllThoughts)
+// .get(getSingleThoughtById)
+// .post(createThoughtsById) //this needs to be an array
+// example data
+// {
+//   "thoughtText": "Here's a cool thought...",
+//   "username": "lernantino",
+//   "userId": "5edff358a0fcb779aa7b118b"
+// }
+
 
 
 module.exports = router;
