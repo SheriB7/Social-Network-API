@@ -50,7 +50,7 @@ createThought({ body }, res) {
     })
     .catch(err => res.status(400).json(err));
 },
-
+//update thought
 updateThought({ params, body }, res) {
   Thought.findOneAndUpdate(
     { _id: params.id },
@@ -68,14 +68,14 @@ updateThought({ params, body }, res) {
 },
 // DELETE /api/thoughts/:id
 deleteThought({ params }, res) {
-  // delete the thought
+  // Delete thought
   Thought.findOneAndDelete({ _id: params.id })
     .then(dbThoughtData => {
       if (!dbThoughtData) {
         res.status(404).json({ message: 'No thought found with this id' });
         return;
       }
-      // delete the reference to deleted thought in user's thought array
+      // Delete the reference to deleted thought in user's thought array
       User.findOneAndUpdate(
         { username: dbThoughtData.username },
         { $pull: { thoughts: params.id } }
