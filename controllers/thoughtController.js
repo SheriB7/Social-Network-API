@@ -1,4 +1,4 @@
-const { User, Thought, Reaction } = require('../models');
+const { User, Thought } = require('../models');
 
 const thoughtController = {
 
@@ -51,7 +51,7 @@ createThought({ body }, res) {
     .catch(err => res.status(400).json(err));
 },
 //update thought
-updateThought({ params, body }, res) {
+updateThoughtById({ params, body }, res) {
   Thought.findOneAndUpdate(
     { _id: params.id },
     body,
@@ -67,7 +67,7 @@ updateThought({ params, body }, res) {
     .catch(err => res.status(400).json(err));
 },
 // DELETE /api/thoughts/:id
-deleteThought({ params }, res) {
+deleteThoughtById({ params }, res) {
   // Delete thought
   Thought.findOneAndDelete({ _id: params.id })
     .then(dbThoughtData => {
