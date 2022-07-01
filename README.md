@@ -13,9 +13,14 @@ A social media startup wants an API for their social network that uses a NoSQL d
 
 ## Video
 
-[Link to Video of Thoughts and Reactions being tested in Insomnia](https://watch.screencastify.com/v/r5xh1urzDSIlBQbAActQ) 
+[Link to Video that shows technical acceptance criteria being met and how to start the application’s server](https://drive.google.com/file/d/1HO4kJMqwwcNKqTMb-DpdA5SVBMLcK7NT/view)
 
-[Link to Video Users and Friends being tested in Insomnia](https://drive.google.com/file/d/1ZAQWd_k_gcqAfXLMvlAsE6FLzcD_M62_/view)
+
+[Link to Video of Thoughts and Reactions being tested in Insomnia using GET, GET ONE, POST, PUT, DELETE, and POST AND DELETE Reaction](https://watch.screencastify.com/v/r5xh1urzDSIlBQbAActQ) 
+
+[Link to Video Users and Friends being tested in Insomnia using GET, GET ONE, POST, PUT, DELETE, and PUT and DELETE Friend](https://drive.google.com/file/d/1ZAQWd_k_gcqAfXLMvlAsE6FLzcD_M62_/view)
+
+
 
 
 
