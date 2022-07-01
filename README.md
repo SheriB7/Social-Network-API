@@ -13,17 +13,10 @@ A social media startup wants an API for their social network that uses a NoSQL d
 
 ## Video
 
-[Link to Video of GET routes to return all users and all thoughts being tested in Insomnia](https://EXAMPLE.com) 
+[Link to Video of Thoughts and Reactions being tested in Insomnia](https://watch.screencastify.com/v/r5xh1urzDSIlBQbAActQ) 
 
-[Link to Video that shows GET routes to return a single user and a single thought being tested in Insomnia](https://EXAMPLE.com)
+[Link to Video Users and Friends being tested in Insomnia](https://drive.google.com/file/d/1ZAQWd_k_gcqAfXLMvlAsE6FLzcD_M62_/view)
 
-[Link to Video that shows the POST, PUT, and DELETE routes for users being tested in Insomnia](https://EXAMPLE.com)
-
-[Link to Video that shows the POST, PUT, and DELETE routes for thoughts being tested in Insomnia](https://EXAMPLE.com)
-
-[Link to Video that shows the POST and DELETE routes for a user’s friend list being tested in Insomnia](https://EXAMPLE.com)
-
-[Link to Video that shows the POST and DELETE routes for reactions to thoughts being tested in Insomnia](https://EXAMPLE.com)
 
 
 

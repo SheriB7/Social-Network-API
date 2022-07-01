@@ -71,12 +71,12 @@ const userController = {
     },
 
     //add friend
-    addFriend(req, res) {
+    createFriend(req, res) {
       console.log("You are following a user!");
       console.log(req.body);
       User.findOneAndUpdate(
-        { _id: req.params.userId },
-        { $addToSet: { following: req.body } },
+        { _id: req.params.id },
+        { $addToSet: { friends: req.body.id } },
         { runValidators: true, new: true }
       )
         .then((user) =>
@@ -89,8 +89,8 @@ const userController = {
     //delete friend
     deleteFriend(req, res) {
       User.findOneAndUpdate(
-        { _id: req.params.userId },
-        { $pull: { following: req.params.followingId } },
+        { _id: req.params.id },
+        { $pull: { friends: { friendId: req.params.friendId } } },
         { runValidators: true, new: true }
       )
         .then((user) =>
