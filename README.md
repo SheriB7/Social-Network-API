@@ -18,7 +18,7 @@ A social media startup wants an API for their social network that uses a NoSQL d
 
 [Link to Video of Thoughts and Reactions being tested in Insomnia using GET, GET ONE, POST, PUT, DELETE, and POST AND DELETE Reaction](https://drive.google.com/file/d/1u-wvd9_tMx6lcnLCSenhmkfJ1z5giLk_/view) 
 
-[Link to Video Users and Friends being tested in Insomnia using GET, GET ONE, POST, PUT, DELETE, and PUT and DELETE Friend](https://drive.google.com/file/d/1ZAQWd_k_gcqAfXLMvlAsE6FLzcD_M62_/view)
+[Link to Video Users and Friends being tested in Insomnia using GET, GET ONE, POST, PUT, DELETE, and POST and DELETE Friend](https://drive.google.com/file/d/1wHH2_tmi9g0Y0atISSOnWRGFVKraegAI/view)
 
 
 

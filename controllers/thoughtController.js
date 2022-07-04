@@ -84,6 +84,7 @@ const thoughtController = {
       })
       .catch((err) => res.status(500).json(err));
   },
+  //add reaction
   createReaction(req, res) {
     // console.log("You added a reaction!")
     // console.log(req.body);
@@ -100,25 +101,7 @@ const thoughtController = {
     .catch((err) => res.status(400).json(err));
   },
 
-
-  //   Reaction.create(body)
-  //     .then((reactionId) => {
-  //       User.findOneAndUpdate(
-  //         { _id: params.thoughtId },
-  //         { $push: { reactions: params.reactionId } },
-  //         { new: true }
-  //       )
-  //         .then((dbUserData) => {
-  //           if (!dbUserData) {
-  //             res.status(404).json({ message: "No thoughts found with this id" });
-  //             return;
-  //           }
-  //           res.json(dbUserData);
-  //         })
-  //         .catch((err) => res.json(err));
-  //     })
-  //     .catch((err) => res.status(400).json(err));
-  // },
+//delete reaction
   deleteReaction(req, res) {
     Thought.findOneAndUpdate(
       { _id: req.params.thoughtId },
@@ -138,6 +121,24 @@ const thoughtController = {
 
 
 module.exports = thoughtController;
+  //   Reaction.create(body)
+  //     .then((reactionId) => {
+  //       User.findOneAndUpdate(
+  //         { _id: params.thoughtId },
+  //         { $push: { reactions: params.reactionId } },
+  //         { new: true }
+  //       )
+  //         .then((dbUserData) => {
+  //           if (!dbUserData) {
+  //             res.status(404).json({ message: "No thoughts found with this id" });
+  //             return;
+  //           }
+  //           res.json(dbUserData);
+  //         })
+  //         .catch((err) => res.json(err));
+  //     })
+  //     .catch((err) => res.status(400).json(err));
+  // },
 
 
 

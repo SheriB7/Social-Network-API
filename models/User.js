@@ -1,4 +1,8 @@
 const { Schema, model } = require('mongoose')
+// const userSchema = mongoose.Schema({
+//   firstName: String,
+//   lastName: String
+// });
 
 // Schema to create User model
 const userSchema = new Schema(
@@ -16,20 +20,8 @@ const userSchema = new Schema(
       match: [/.+@.+\..+/]
     },
 
-
-    thoughts: [
-      {
-        type: Schema.Types.ObjectId,
-        ref: 'Thought',
-      },
-    ],
-
-    friends: [
-      {
-        type: Schema.Types.ObjectId,
-        ref: 'User',
-      },
-    ],
+    thoughts: [{ type: Schema.Types.ObjectId, ref: 'Thought' }],
+    friends: [{ type: Schema.Types.ObjectId, ref: 'User' }]
   },
   {
     // Mongoose supports two Schema options to transform Objects after querying MongoDb: toJSON and toObject.
@@ -39,14 +31,37 @@ const userSchema = new Schema(
     },
     id: false,
   }
-);
+  );
+  // Initialize our User model
+const User = model('User', userSchema);
 
-// Create a virtual property `friendCount` that gets and sets the user's full name
-userSchema.virtual('friendCount')
+module.exports = User;
+  
+  // Create a virtual property `friendCount` that gets and sets the user's full name
+  userSchema.virtual('friendCount')
   // Getter
   .get(function () {
     return this.friends.length;
   })
+  //   thoughts: [
+  //     {
+  //       type: Schema.Types.ObjectId,
+  //       ref: 'Thought',
+  //     },
+  //   ],
+
+  //   // friends:{
+  //   //   firstName: String,
+  //   //   lastName: String
+  //   // },
+  
+  //   friends: [
+    //     {
+      //       type: Schema.Types.ObjectId,
+      //       ref: 'User',
+  //     },
+  //   ],
+  // },
 // Setter to set the first and last name
 // .set(function (v) {
 //   const first = v.split(' ')[0];
@@ -54,9 +69,6 @@ userSchema.virtual('friendCount')
 //   this.set({ first, last });
 // });
 
-// Initialize our User model
-const User = model('User', userSchema);
 
-module.exports = User;
 
 
