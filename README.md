@@ -43,7 +43,7 @@ The challenge is to build an API for a social network web application where user
 
 
 
-Contact Information
+## Contact Information
 ```
 https://github.com/SheriB7
 Sherib70@gmail.com
